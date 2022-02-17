@@ -882,7 +882,7 @@ int32_t cam_sensor_driver_cmd(struct cam_sensor_ctrl_t *s_ctrl,
 			s_ctrl->power_stat = CAM_SENSOR_POWER_ON;
 		}
 		else{
-			CAM_ERR(CAM_SENSOR,"SENSOR already power on !!");
+			CAM_WARN(CAM_SENSOR,"SENSOR already power on !!");
 		}
 
 		if (s_ctrl->i2c_data.poweron_reg_settings.is_settings_valid) {
@@ -1029,7 +1029,7 @@ int32_t cam_sensor_driver_cmd(struct cam_sensor_ctrl_t *s_ctrl,
 			s_ctrl->power_stat = CAM_SENSOR_POWER_ON;
 		}
 		else{
-			CAM_ERR(CAM_SENSOR,"SENSOR already power on!!");
+			CAM_WARN(CAM_SENSOR,"SENSOR already power on!!");
 		}
 
 		s_ctrl->sensor_state = CAM_SENSOR_ACQUIRE;
@@ -1719,7 +1719,7 @@ int sensor_start_thread(void *ctrl)
 					}
 					else
 					{
-						CAM_ERR(CAM_SENSOR,"sensor init setting success");
+						CAM_INFO(CAM_SENSOR,"sensor init setting success");
 						s_ctrl->setting_stat = CAM_SENSOR_SETTING_SUCCESS;
 					}
 				}
@@ -1730,7 +1730,7 @@ int sensor_start_thread(void *ctrl)
 		}
 	}
 	else{
-		CAM_ERR(CAM_SENSOR,"sensor already power on!!");
+		CAM_WARN(CAM_SENSOR,"sensor already power on!!");
 	}
 	mutex_unlock(&(s_ctrl->cam_sensor_mutex));
 	return 0;
