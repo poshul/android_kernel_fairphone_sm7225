@@ -27,6 +27,7 @@ pxlw,hdr-color-temp = <7500>;
 pxlw,virtual-channel-id = [00 02 03];
 pxlw,dsi-embedded-enable = [00 02];
 pxlw,non-embedded-mode-transfer-length = <0x0 0x400>;
+pxlw,panel-dimming-brightness = <250>;
 pxlw,dpp-only-enable = <0>;
 pxlw,qsync-mode = <0>;
 pxlw,esd-ctrl = <0>;
